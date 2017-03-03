@@ -1,15 +1,6 @@
-import React, { PropTypes } from 'react';
+import { h, Component } from 'preact';
 
-const propTypes = {
-  children: PropTypes.node.isRequired,
-  name: PropTypes.string.isRequired,
-};
-
-const childContextTypes = {
-  themeName: PropTypes.string,
-};
-
-export default class ThemeProvider extends React.Component {
+export default class ThemeProvider extends Component {
   getChildContext() {
     return {
       themeName: this.props.name,
@@ -17,9 +8,6 @@ export default class ThemeProvider extends React.Component {
   }
 
   render() {
-    return React.Children.only(this.props.children);
+    return this.props.children;
   }
 }
-
-ThemeProvider.propTypes = propTypes;
-ThemeProvider.childContextTypes = childContextTypes;

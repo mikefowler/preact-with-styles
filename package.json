@@ -1,5 +1,5 @@
 {
-  "name": "react-with-styles",
+  "name": "preact-with-styles",
   "version": "1.1.1",
   "description": "",
   "main": "lib/withStyles.js",
@@ -69,7 +69,7 @@
     "sinon-sandbox": "^1.0.2"
   },
   "peerDependencies": {
-    "react": ">=0.14"
+    "preact": ">=1.2.0"
   },
   "dependencies": {
     "deepmerge": "^1.0.0",
